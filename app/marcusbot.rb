@@ -2,18 +2,18 @@ require 'slack-ruby-bot'
 
 class MarcusBot < SlackRubyBot::Bot
   command 'ping' do |client, data, match|
-    client.say(text: 'foda-se', channel: data.channel, as_user: true)
+    client.say(text: 'xunda', channel: data.channel, as_user: true)
   end
 
   command 'blame' do |client, data, match|
     witch = data.text.split(' ').last
-    response = ["vsf #{witch}", "daora seu bosta #{witch}", "valeu fdp #{witch}"].sample
+    response = ["text #{witch}", "daora #{witch}", "valeu #{witch}"].sample
     client.say(text: response, channel: data.channel, as_user: true)
   end
 
   command 'gostou do lanche?' do |client, data, match|
     witch = data.text.split(' ').last
-    response = ["#doluxoaolixo", "só vegetar agora", "quantidade > qualidade"].sample
+    response = ["#doluxo", "só ficar de boa agora", "quantidade > qualidade"].sample
     client.say(text: response, channel: data.channel, as_user: true)
   end
 end
